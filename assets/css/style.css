@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
+}
+
+#main-banner {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/Mario.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 1.875rem;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  font-size: 2rem;
+  color: #FFF;
+  text-decoration: none;
+}
+
+#menu ul {
+  display: flex;
+  list-style: none;
+  gap: 0 20px;
+}
+
+#menu a {
+  color: #FFF;
+  font-size: 1.5rem;
+  margin-right: 20px;
+  display: block;
+  text-decoration: none;
+}
+
+#btn-sign-up {
+  background: #00b9bd;
+  border-radius: 5px;
+  padding: 0 .5rem;
+}
+
+#highlights {
+  display: flex;
+  height: 50vh;
+  flex-direction: column;
+  justify-content: center;
+  color: #FFF;
+}
+
+.trailer {
+  display: inline-block;
+  width: 120px;
+  background-color: #00b9bd;
+  text-align: center;
+  padding: .5rem;
+  color: white;
+  text-decoration: none;
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+.info-movie {
+  display: flex;
+  margin-top: 20px;
+}
+
+.gender {
+  margin-right: 20px;
+}
+
+.watch-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#movies {
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+  grid-template-columns: repeat(5, 200px);
+}
+
+#movie {
+  height: 300px;
+}
+
+.movie img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.form {
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 4px;
+  padding: 40px;
+}
+
+.form h2 {
+  color: #FFF;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.form input {
+  display: block;
+  width: 300px;
+  height: 40px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  margin-bottom: 20px;
+  padding: .5rem;
+}
+
+.form a {
+  display: block;
+  color: #FFF;
+  text-decoration: none;
+  background: #00b9bd;
+  padding: .5rem;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.9);
+  color: #FFF;
+  text-align: center;
+  padding: .5rem;
+}
+
+@media (max-width: 1025px) {
+  #movies {
+    grid-template-columns: repeat(4, 200px);
+  }
+}
+
+@media (max-width: 769px) {
+  #logo {
+    font-size: 1.2rem;
+  }
+
+  #menu ul {
+    gap: 0 10px;
+  }
+
+  #menu a {
+    font-size: .8rem;
+  }
+
+
+  #movies {
+    grid-template-columns: repeat(3, 200px);
+  }
+}
+
+@media (max-width: 426px) {
+  #main-banner {
+    background-position: 50%;
+  }
+
+  #highlights {
+    justify-content: flex-end;
+    height: 80vh;
+  }
+
+
+  #movies {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form input {
+    width: 200px;
+    height: 30px;
+  }
+
+  footer {
+    font-size: .8rem;
+  }
+}
+
+@media (max-width: 376px) {
+  .container {
+    padding: 1rem;
+  }
+
+  #movies {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  footer {
+    font-size: .6rem;
+  }
+}
